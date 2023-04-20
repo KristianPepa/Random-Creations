@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1a1d24;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share{
+    display: flex;
+    z-index: 999;
+    padding: 12px;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    top: 6rem;    
+}
+
+.share:hover{
+    outline: 3px solid #1DA1F2;
+    outline-offset: -4px;
+}
+
+
+/* Instagram CSS */
+.insta{
+    display: flex;
+    padding: 12px;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    right: 5rem;
+    top: 3rem; 
+    animation-name: instagram-show;
+}
+
+#image{
+    background-image: "./images/instagram-white.svg";
+}
+
+.insta:hover{
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.instagram-hide{
+    animation-name: instagram-hide;   
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.instagram-show{
+    animation-name: instagram-show;   
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    right: 0rem;
+}
+
+@keyframes instagram-hide{
+    before {right: 5rem}
+    to {right: 0rem}
+}
+
+@keyframes instagram-show{
+    before {right: 0rem}
+    to {right: 5rem}
+}
+
+/* Twitter CSS */
+.twitter{
+    display: flex;
+    padding: 12px;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    bottom: 5rem;
+}
+
+.twitter:hover{
+    background-color: #1DA1F2;
+}
+
+.twitter-hide{
+    animation-name: twitter-hide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-delay: .2s;
+}
+
+.twitter-show{
+    animation-name: twitter-show;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-delay: .2s;
+    bottom: 0rem;
+}
+
+@keyframes twitter-hide{
+    before {bottom: 5rem}
+    to {bottom: 0rem}
+}
+
+@keyframes twitter-show{
+    before {bottom: 0rem}
+    to {bottom: 5rem}
+}
+
+/* Snapchat CSS */
+.snapchat{
+    display: flex;
+    padding: 12px;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    left: 5rem;
+    bottom: 3rem;
+}
+
+.snapchat:hover{
+    background-color: #FFFC00;
+}
+
+.snapchat-hide{
+    animation-name: snapchat-hide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-delay: .4s;
+}
+
+.snapchat-show{
+    animation-name: snapchat-show;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-delay: .4s;
+    left: 0rem;
+}
+
+@keyframes snapchat-hide {
+    before {left: 5rem}
+    to {left: 0rem}
+}
+
+@keyframes snapchat-show {
+    before {left: 0rem}
+    to {left: 5rem}
+}
