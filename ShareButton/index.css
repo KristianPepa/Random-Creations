@@ -2,14 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-body{
     background-color: #1a1d24;
     color: #fff;
 }
 
-.container{
+body{
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -41,13 +38,9 @@ body{
     background-color: white;
     cursor: pointer;
     position: relative;
-    right: 5rem;
+    right: 0rem;
     top: 3rem; 
-    animation-name: instagram-show;
-}
-
-#image{
-    background-image: "./images/instagram-white.svg";
+    animation: instagram-show .5s both;
 }
 
 .insta:hover{
@@ -57,19 +50,14 @@ body{
 .instagram-hide{
     animation-name: instagram-hide;   
     animation-duration: .5s;
+    animation-delay: .4s;
     animation-fill-mode: both;
-}
-
-.instagram-show{
-    animation-name: instagram-show;   
-    animation-duration: .5s;
-    animation-fill-mode: both;
-    right: 0rem;
+    right: 5rem;
 }
 
 @keyframes instagram-hide{
-    before {right: 5rem}
-    to {right: 0rem}
+    before {right: 5rem;}
+    to {right: 0rem;}
 }
 
 @keyframes instagram-show{
@@ -85,7 +73,8 @@ body{
     background-color: white;
     cursor: pointer;
     position: relative;
-    bottom: 5rem;
+    bottom: 0rem;
+    animation: twitter-show .5s both .2s
 }
 
 .twitter:hover{
@@ -97,14 +86,7 @@ body{
     animation-duration: .5s;
     animation-fill-mode: both;
     animation-delay: .2s;
-}
-
-.twitter-show{
-    animation-name: twitter-show;
-    animation-duration: .5s;
-    animation-fill-mode: both;
-    animation-delay: .2s;
-    bottom: 0rem;
+    bottom: 5rem;
 }
 
 @keyframes twitter-hide{
@@ -125,8 +107,9 @@ body{
     background-color: white;
     cursor: pointer;
     position: relative;
-    left: 5rem;
     bottom: 3rem;
+    left: 0rem;
+    animation: snapchat-show .5s both .4s;
 }
 
 .snapchat:hover{
@@ -137,15 +120,8 @@ body{
     animation-name: snapchat-hide;
     animation-duration: .5s;
     animation-fill-mode: both;
-    animation-delay: .4s;
-}
-
-.snapchat-show{
-    animation-name: snapchat-show;
-    animation-duration: .5s;
-    animation-fill-mode: both;
-    animation-delay: .4s;
-    left: 0rem;
+    animation-delay: .0s;
+    left: 5rem;
 }
 
 @keyframes snapchat-hide {

@@ -1,20 +1,22 @@
+const instagram = document.getElementById('instagram')
+const twitter = document.getElementById('twitter')
+const snapchat = document.getElementById('snapchat')
+const share = document.getElementById('shareButton')
 var buttonStatus = true
 
 function changeStatus(){
-    const insta = document.getElementById('instagram')
-    buttonStatus = !buttonStatus
-    if(buttonStatus === false && (insta.className.endsWith('insta') || insta.className.endsWith('show'))){
+    if(instagram.className.endsWith('insta') || instagram.className.endsWith('show')){
         // Change Position
-        document.getElementById('shareButton').src = "./images/share.svg"
-        document.getElementById('instagram').className = "insta instagram-hide"
-        document.getElementById('twitter').className = "twitter twitter-hide"
-        document.getElementById('snapchat').className = "snapchat snapchat-hide"
+        share.src = "./images/share.svg"
+        instagram.className = "insta instagram-hide"
+        twitter.className = "twitter twitter-hide"
+        snapchat.className = "snapchat snapchat-hide"
     }else{
         // Change Position
-        document.getElementById('shareButton').src = "./images/close.svg"
-        document.getElementById('instagram').className = "insta instagram-show"
-        document.getElementById('twitter').className = "twitter twitter-show"
-        document.getElementById('snapchat').className = "snapchat snapchat-show"
+        share.src = "./images/close.svg"
+        instagram.className = "insta"
+        twitter.className = "twitter twitter-show"
+        snapchat.className = "snapchat snapchat-show"
     }
 }
 
