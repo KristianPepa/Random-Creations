@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidationStyle</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form class="container">
+        <div class="inside-box">
+            <div class="top">
+                <p class="bold">Hello Again!</p>
+                <p>Welcome back you've</p>
+                <p>been missed!</p>
+            </div>
+            <div class="middle">
+                <input type="email" placeholder="Enter email" id="email" onchange="emailInput(this)">
+                <input type="password" placeholder="Password" class="" id="pass" min="5" title="Longer than 5 characters" onchange="passwordInput(this)">
+                <a href="#">Recovery Password</a>
+                <button type="button" class="disable-button" id="button" onclick="showAlert()">Sign In</button>
+            </div>
+            <div class="bottom">
+                <div class="line">
+                    <div></div>
+                    <p>Or continue with</p>
+                    <div></div>
+                </div>
+                <div class="shareIcons">
+                    <div>
+                        <img src="images/google.png" alt="google" width="20px">
+                    </div>
+                    <div>
+                        <img src="images/apple.svg" alt="apple" width="30px">
+                    </div>
+                    <div>
+                        <img src="images/facebook.png" alt="facebook" width="25px">
+                    </div>
+                </div>
+                <div class="registerLink">
+                    <p>Not a member?</p>
+                    <a href="#">Register now</a>
+                </div>
+            </div>
+        </div>
+        <div id="hide">
+            <div class="alert-background">
+            </div>
+            <div class="alert-box">
+                <p>Welcome Back</p>
+                <button type="button">Thank You</button>
+            </div>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>

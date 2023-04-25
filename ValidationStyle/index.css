@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #2a2a2a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 530px;
+    width: 300px;
+    background-color: lightgray;
+    border-radius: 25px;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top{
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.top .bold{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.middle{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#pass,#email{
+    border-radius: 10px;
+    height: 45px;
+    width: 250px;
+    padding: 0 0 0 10px;
+    font-size: .9rem;
+    outline: none;
+    border: none
+}
+
+.middle a{
+    font-size: .8rem;
+    text-decoration: none;
+    text-align: end;
+    font-weight: 700;
+    color: darkslategrey ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.middle a:hover{
+    color: black;
+}
+
+.button{
+    cursor: pointer;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F86A68;
+    color: white;
+    font-weight: 700;
+}
+
+.disable-button{
+    cursor: auto;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-weight: 700;
+}
+
+.button:hover{
+    background-color: lightcoral;
+}
+
+.line{
+    margin-top: 20px;
+    font-size: .7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.line div{
+    width: 45px;
+    border-bottom: 1px solid black;
+}
+
+.shareIcons{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shareIcons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 43px;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 2px solid white;
+}
+
+.shareIcons > div:hover{
+    background-color: white;
+    border: 2px solid lightgray;
+    animation: size .5s both;
+}
+
+@keyframes size {
+    before{transform: scale(1)}
+    to{transform: scale(1.2)}
+}
+
+.registerLink{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    font-size: .8rem;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.registerLink a{
+    text-decoration: none;
+}
+
+.registerLink a:hover{
+    color: black;
+}
+
+#email:invalid, #email:focus:invalid{
+    border: 2px solid red;
+    animation: shake .2s;
+}
+
+@keyframes shake {
+    0%{transform: rotate(-2deg);}
+    50%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes pass{
+    0%{border: 2px solid red;transform: rotate(-2deg);}
+    50%{border: 2px solid red;transform: rotate(2deg)}
+    100%{border: 2px solid red;transform: rotate(0deg)}
+}
+
+.password-error{
+    border: 2px solid red;
+    animation: pass .2s both;
+}
+
+
+
+.alert-background{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.alert-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 170px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.alert-box p{
+    font-size: 1.5rem;
+}
+
+.alert-box button{
+    margin-top: 10px;
+    z-index: 25;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: 2px solid gray;
+    background-color: white;
+}
+
+.alert-box button:hover{
+    background-color: gray;
+    border: 2px solid white;
+}
+
+#hide{
+    visibility: hidden;
+}
